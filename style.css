@@ -1,0 +1,68 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    overflow-x: hidden;
+}
+
+header { text-align: center; padding: 40px 20px; }
+header h1 { font-size: 3rem; letter-spacing: 2px; text-transform: uppercase; color: #00d2ff; }
+
+.container { width: 90%; max-width: 900px; z-index: 1; }
+
+/* Glassmorphism Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+/* Floating Label Inputs */
+.input-box { position: relative; margin-bottom: 25px; }
+.input-box input {
+    width: 100%; padding: 10px 0; font-size: 16px; color: #fff;
+    background: transparent; border: none; border-bottom: 2px solid #fff; outline: none;
+}
+.input-box label {
+    position: absolute; top: 0; left: 0; padding: 10px 0;
+    pointer-events: none; transition: 0.5s;
+}
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label {
+    top: -20px; font-size: 12px; color: #00d2ff;
+}
+
+.glow-btn {
+    background: #00d2ff; border: none; padding: 12px 30px;
+    border-radius: 30px; font-weight: 600; cursor: pointer;
+    transition: 0.3s; box-shadow: 0 0 15px #00d2ff;
+}
+.glow-btn:hover { transform: scale(1.05); box-shadow: 0 0 25px #00d2ff; }
+
+/* Table Styling */
+.table-wrapper { overflow-x: auto; margin-top: 20px; }
+table { width: 100%; border-collapse: collapse; }
+th { background: rgba(0, 210, 255, 0.2); padding: 15px; text-align: left; }
+td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+tr:hover { background: rgba(255, 255, 255, 0.05); }
+
+.alert {
+    background: #27ae60; color: white; padding: 15px;
+    text-align: center; border-radius: 10px; margin-bottom: 20px;
+    animation: slideIn 0.5s ease;
+}
+.hidden { display: none; }
+
+@keyframes slideIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY
