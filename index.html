@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="glass-bg"></div>
+
+    <header>
+        <h1 class="animate-drop">Registration Hub</h1>
+        <p class="animate-fade">Join the future of technology workshops.</p>
+    </header>
+
+    <main class="container">
+        <div id="success-message" class="alert hidden">
+            <span>🎉</span> Registration Successful!
+        </div>
+
+        <section class="glass-card">
+            <form id="registrationForm">
+                <h2 class="form-title">Personal Details</h2>
+                
+                <div class="input-box">
+                    <input type="text" id="name" required placeholder=" ">
+                    <label>Full Name</label>
+                    <span class="error-msg" id="nameError"></span>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" id="email" required placeholder=" ">
+                    <label>Email Address</label>
+                    <span class="error-msg" id="emailError"></span>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-box">
+                        <input type="text" id="phone" required placeholder=" ">
+                        <label>Phone Number</label>
+                        <span class="error-msg" id="phoneError"></span>
+                    </div>
+                    <div class="input-box">
+                        <input type="date" id="dob" required>
+                        <span class="error-msg" id="dobError"></span>
+                    </div>
+                </div>
+
+                <div class="select-box">
+                    <select id="event" required>
+                        <option value="" disabled selected>Select Event</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="AI & Robotics">AI & Robotics</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                    </select>
+                    <span class="error-msg" id="eventError"></span>
+                </div>
+
+                <div class="check-container">
+                    <input type="checkbox" id="confirm">
+                    <label for="confirm">I confirm all details are accurate</label>
+                    <span class="error-msg" id="confirmError"></span>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="glow-btn">Register Now</button>
+                    <button type="reset" class="outline-btn">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="glass-card table-card animate-up">
+            <h3>Registered Participants (<span id="count">0</span>)</h3>
+            <div class="table-wrapper">
+                <table id="participantTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Event</th>
+                            <th>Mode</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AdrolT Technologies | Premium Interactivity</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
